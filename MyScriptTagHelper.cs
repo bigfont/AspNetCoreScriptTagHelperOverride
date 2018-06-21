@@ -12,17 +12,11 @@ namespace AspNetCoreScriptTagHelperOverride
     public class MyScriptTagHelper : ScriptTagHelper
     {
         public MyScriptTagHelper(
-            IHostingEnvironment hostingEnvironment,
+            IHostingEnvironment env,
             IMemoryCache cache,
-            HtmlEncoder htmlEncoder,
-            JavaScriptEncoder javaScriptEncoder,
-            IUrlHelperFactory urlHelperFactory) : base(
-                hostingEnvironment,
-                cache,
-                htmlEncoder,
-                javaScriptEncoder,
-                urlHelperFactory)
-        { } // B
+            HtmlEncoder html,
+            JavaScriptEncoder js,
+            IUrlHelperFactory url) : base(env, cache, html, js, url) { } // B
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
