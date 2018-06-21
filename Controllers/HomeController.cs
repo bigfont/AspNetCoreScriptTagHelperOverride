@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-
 namespace AspNetCoreScriptTagHelperOverride.Controllers
 {
     public class HomeController : Controller
